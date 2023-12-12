@@ -1,0 +1,24 @@
+<!-- https://stackoverflow.com/questions/17648010/alert-box-shows-form-data-when-clicking-button -->
+<!-- https://jsfiddle.net/D59su/ -->
+
+<head>
+    <script>
+       function formAlert() {
+        alert_string = '';
+        alert_string = alert_string + document.getElementById('first_name').value;
+        alert_string = alert_string + ' ';
+        alert_string = alert_string + document.getElementById('last_name').value;
+        
+        alert(alert_string);
+       }
+    </script>
+</head>
+
+<body>
+    <form id="foo" onsubmit="formAlert(); return false;" method="POST">
+        <p><label for="first_name">First Name<label><input type="text" id="first_name" value="fred" /></p>
+        <p><label for="last_name">Last Name<label><input type="text" id="last_name" value="blogs" /></p>
+
+        <p><input type="submit" value="click me" onclick=""/></p>
+    </form>
+</body>
